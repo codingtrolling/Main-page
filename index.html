@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingTrolling | Home</title>
+    <style>
+        /* Modern CSS Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #121212;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Menu */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #00ffcc;
+        }
+
+        .logo { font-size: 24px; font-weight: bold; color: #00ffcc; text-transform: uppercase; }
+
+        nav ul { display: flex; list-style: none; }
+
+        nav ul li { margin-left: 30px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: #00ffcc; }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1614850523296-d8c1af93d400?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 { font-size: 50px; margin-bottom: 10px; }
+
+        /* Game Description Section */
+        .content {
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-card {
+            background: #1e1e1e;
+            padding: 40px;
+            border-radius: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            border: 1px solid #333;
+        }
+
+        .project-text { flex: 1; min-width: 300px; }
+
+        .project-text h2 { color: #00ffcc; margin-bottom: 20px; font-size: 32px; }
+
+        .project-text p { margin-bottom: 20px; color: #ccc; font-size: 18px; }
+
+        .btn-play {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #00ffcc;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-play:hover { background: #fff; transform: translateY(-3px); }
+
+        /* Contact Section */
+        #contact {
+            padding: 60px 10%;
+            background: #161616;
+            text-align: center;
+        }
+
+        .contact-info { margin-top: 20px; color: #aaa; }
+
+        footer { text-align: center; padding: 20px; background: #000; font-size: 14px; color: #555; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">CodingTrolling</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Welcome to My Workspace</h1>
+        <p>Building the next generation of web-based games.</p>
+    </header>
+
+    <section class="content" id="projects">
+        <div class="project-card">
+            <div class="project-text">
+                <h2>Subway Runner 3D</h2>
+                <p>
+                    A fast-paced, high-octane endless runner built with Three.js. 
+                    Navigate through a detailed urban environment, collect golden coins, 
+                    and dodge oncoming trains. Features Google Login integration and 
+                    dynamic sound effects.
+                </p>
+                <a href="/Subway-runner/" class="btn-play">PLAY NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have a suggestion or found a bug? Reach out!</p>
+        <div class="contact-info">
+            <p>Email: rabi65171@gmail.com</p>
+            <p>GitHub: github.com/codingtrolling</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 CodingTrolling. All rights reserved.
+    </footer>
+
+</body>
+</html>
