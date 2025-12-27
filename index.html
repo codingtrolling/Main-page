@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <style>
         :root {
             --accent: #00ffcc;
@@ -19,7 +20,7 @@
             font-family: 'Segoe UI', sans-serif;
         }
 
-        /* --- PRINCIPAL MENU (KEEPING EVERYTHING) --- */
+        /* --- PRINCIPAL MENU (RETAINED) --- */
         nav {
             padding: 10px 8%;
             display: flex;
@@ -44,6 +45,7 @@
 
         .nav-links {
             display: flex;
+            align-items: center;
             gap: 25px;
         }
 
@@ -61,6 +63,13 @@
             opacity: 1;
             color: var(--accent);
             text-shadow: 0 0 10px var(--accent);
+        }
+
+        /* --- AUTH BUTTON CONTAINER --- */
+        #auth-container {
+            margin-left: 15px;
+            padding: 5px;
+            border-left: 1px solid rgba(255,255,255,0.2);
         }
 
         /* --- HERO --- */
@@ -90,7 +99,7 @@
             text-shadow: 0 0 30px rgba(0,255,204,0.5); 
         }
 
-        /* --- PROJECTS GRID (FOR RUNNER AND MEDIA PLAYER) --- */
+        /* --- PROJECTS GRID --- */
         .content {
             padding: 40px 8%;
             display: grid;
@@ -165,13 +174,21 @@
             <a href="#">Home</a>
             <a href="https://codingtrolling.github.io/Subway-runner">Subway Runner</a>
             <a href="https://codingtrolling.github.io/Media-Player">Media Player</a>
-            <a href="mailto:contact.codingtrolling@gmail.com">Contact</a>
+            
+            <div id="auth-container">
+                <div id="g_id_onload"
+                     data-client_id="778775023056-dnrr0d6ujirr01cs0vclfd6gpgseh7kl.apps.googleusercontent.com"
+                     data-callback="handleCredentialResponse"
+                     data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin" data-type="standard" data-theme="filled_black" data-size="small" data-text="signin_with" data-shape="pill"></div>
+            </div>
         </div>
     </nav>
 
     <section class="hero">
-        <h1>Welcome to My Workspace</h1>
-        <p style="letter-spacing: 2px; opacity: 0.6;">The Web-based apps Home</p>
+        <h1>Welcome To my Workspace</h1>
+        <p style="letter-spacing: 2px; opacity: 0.6;">Web-based Apps in one site</p>
     </section>
 
     <div class="content">
@@ -200,5 +217,12 @@
         </div>
     </footer>
 
+    <script>
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            // After signing in, you can use the response.credential to verify user
+            alert("Success! Secure connection established.");
+        }
+    </script>
 </body>
 </html>
